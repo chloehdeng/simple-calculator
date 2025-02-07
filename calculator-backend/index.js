@@ -21,6 +21,7 @@ app.post("/calculate", (req, res) => {
     // Evaluate the expression
     const result = eval(expression); // Use eval carefully; validate input in production
     res.json({ result });
+    console.log('Expression calculated:', result);
   } catch (error) {
     res.status(400).json({ error: "Invalid expression" });
   }
